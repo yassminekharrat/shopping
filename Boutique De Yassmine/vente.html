@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vente</title>
+            <!-- Google Font -->
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+            <!-- CSS Libraries -->
+            <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+            <link href="css/style.css" rel="stylesheet">
+</head>
+<style>
+  h1{
+    text-decoration-color: pink;
+  }
+</style>
+<body>
+  <!-- Top Bar Start -->
+  <div class="top-bar d-none d-md-block">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-8">
+                  <div class="top-bar-left">
+                      <div class="text">
+                          <i class="fa fa-phone-alt"></i>
+                          <h2>+216 28142101</h2>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="top-bar-right">
+                      <div class="social">
+                          <a href=""><i class="fab fa-twitter"></i></a>
+                          <a href=""><i class="fab fa-facebook-f"></i></a>
+                          <a href=""><i class="fab fa-linkedin-in"></i></a>
+                          <a href=""><i class="fab fa-instagram"></i></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Top Bar End -->
+
+  <!-- Nav Bar Start -->
+  <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <div class="container-fluid">
+          <a href="index.html" class="navbar-brand">Boutique De Yassmine</a>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+              <div class="navbar-nav ml-auto">
+                  <a href="index.html" class="nav-item nav-link">Home</a>
+                  <a href="about.html" class="nav-item nav-link">Presentation</a>
+                  <a href="produit.html" class="nav-item nav-link active">Produit</a>
+                  <a href="contact.html" class="nav-item nav-link">Contact</a>
+              </div>
+              <div class="search-wrap">
+                <div class="container">
+                  <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+                  <form action="#" method="post">
+                    <input type="text" class="form-control" placeholder="rechercher">
+                  </form>
+                </div>
+              </div>
+              <a href="vente.html" class="fa fa-shopping-cart" style="font-size:36px;color:black"></a>
+              <br>
+          </div>
+      </div>
+  </div>
+  <!-- Nav Bar End -->
+
+
+  <!-- Page Header Start -->
+  <div class="page-header">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <h2>Panier</h2>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Page Header End -->
+  <!--vente start-->
+    <h1>Ajouter vente</h1>
+    <form id="form">
+        <img src="./images/robefemme.jpg"width="80px;" >
+
+        <label for="prod">Produit</label>
+        <input id="prod" value="robe femme">
+        <label for="qte">Qte</label>
+        <input type="number" id="qte" required>
+        <label for="prix">prix</label>
+        <input type="text" value="50 DT" disabled>
+        <br>
+
+        <img src="./images/tshirthomme.jpg"width="80px;" >
+
+        <label for="prod">Produit</label>
+        <input id="prod" value="t-shirt homme">
+        <label for="qte">Qte</label>
+        <input type="number" id="qte" required>
+        <label for="prix">prix</label>
+        <input type="text" value="40 DT" disabled>
+        <br>
+        <img src="./images/t_shirt2.jpg"width="80px;" >
+
+        <label for="prod">Produit</label>
+        <input id="prod" value="t-shirt femme">
+        <label for="qte">Qte</label>
+        <input type="number" id="qte" required>
+        <label for="prix">prix</label>
+        <input type="text" value="30 DT" disabled>
+        <br>
+        <br>
+        <input type="button" id="btn" value="Ajouter">
+        <input type="button" value="Supprimer la sélection" onclick="Supprimer(this.form.produit)">
+        <input type="button" value="Supprimer tout" onclick="SupprimerTout(this.form.produit)">
+    </form>
+
+    <hr>
+    <h1>liste des ventes</h1>
+<table id="tabvente" border="1" width="50%">
+    <thead>
+        <tr>
+            <th>Produit</th>
+            <th>qte</th>
+            <th>prix</th>
+            <th>total</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+
+<!--vente end-->
+
+        <!-- Footer Start -->
+        <div class="footer wow fadeIn" data-wow-delay="0.3s">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="footer-info">
+                        <a href="index.html" class="footer-logo">Boutique De Yassmine
+                        <h3>Route Ain Km 3.5 Sfax</h3>
+                        <div class="footer-menu">
+                            <p>+216 28142101</p>
+                            <p>info@boutique.com</p>
+                        </div>
+                        <div class="footer-social">
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-youtube"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container copyright">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>&copy; <a href="#">Votre nom de  site</a>,Tout droit réservé..</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+    <script src="js1/ventejs.js"></script>
+</body>
+</html>
